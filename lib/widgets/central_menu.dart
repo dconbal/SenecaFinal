@@ -12,7 +12,7 @@ class CentralMenu extends StatelessWidget {
             Tarjeta(
                 imagen: "sombrero.png",
                 texto: "Alumnado del \n centro",
-                pagina: 'screens'),
+                pagina: 'alumnado'),
             Tarjeta(
                 imagen: "profesor.png",
                 texto: "Personal del \n centro",

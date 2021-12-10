@@ -58,15 +58,16 @@ class Contenido extends StatelessWidget {
 }
 
 class ParteDeArriba extends StatelessWidget {
+  String correoUser = "";
   @override
   Widget build(BuildContext context) {
-    final correoUser = FirebaseAuth.instance.currentUser!.email;
+    final correoUser = FirebaseAuth.instance.currentUser!.email!;
     final sesion = new GoogleSignInProvider();
     return Container(
       height: 40,
       child: Row(
         children: [
-          Text(correoUser!,
+          Text(correoUser,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
           SizedBox(width: 100),
           GestureDetector(

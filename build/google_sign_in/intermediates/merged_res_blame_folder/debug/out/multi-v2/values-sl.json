@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\src\\Flutter proyectos\\seneca\\build\\google_sign_in\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sl\\values-sl.xml",
+            "outputFile": "C:\\src\\Flutter proyectos\\senecafinal\\build\\google_sign_in\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sl\\values-sl.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Daniel\\.gradle\\caches\\transforms-2\\files-2.1\\7b6f239215f36f3ffa40b7743f1d3a5c\\jetified-play-services-basement-16.0.1\\res\\values-sl\\values.xml",
@@ -57,7 +57,7 @@
             ]
         },
         {
-            "outputFile": "C:\\src\\Flutter proyectos\\seneca\\build\\google_sign_in\\intermediates\\res\\merged\\debug\\values-sl\\values-sl.xml",
+            "outputFile": "C:\\src\\Flutter proyectos\\senecafinal\\build\\google_sign_in\\intermediates\\res\\merged\\debug\\values-sl\\values-sl.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Daniel\\.gradle\\caches\\transforms-2\\files-2.1\\7b6f239215f36f3ffa40b7743f1d3a5c\\jetified-play-services-basement-16.0.1\\res\\values-sl\\values.xml",

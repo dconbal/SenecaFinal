@@ -6,8 +6,6 @@ import 'package:seneca/firebase/login_firebase.dart';
 import 'package:seneca/providers/login_provider.dart';
 
 class LoginPage extends StatelessWidget {
-  bool _mostrarPass = true;
-
   @override
   Widget build(BuildContext context) {
     GoogleSignInProvider service = new GoogleSignInProvider();

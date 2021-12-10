@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "547093382057",
+    "project_id": "signin-cb5bb",
+    "storage_bucket": "signin-cb5bb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:547093382057:android:2830e0eace4e88b58a7ab8",
+        "android_client_info": {
+          "package_name": "com.example.seneca"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "547093382057-olpgvtar9onc13e82vqu1g62m6ndagtf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4Svaw8Gc-NdZGLnUXJ5QL6X9N7hfCZmg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "547093382057-olpgvtar9onc13e82vqu1g62m6ndagtf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

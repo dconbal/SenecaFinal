@@ -6,16 +6,11 @@ class MailPhoneScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Center(child: Text("Listado de cursos"))),
-      body: _lista(),
+      body: _cursos(),
     );
   }
 
-  Widget _lista() {
-    //print(menuProvider.opciones);
-    //menuProvider.cargarData().then((opciones) {
-    //  print(opciones);
-    //});
-
+  Widget _cursos() {
     return FutureBuilder(
       future: datos.getCursos(),
       initialData: [],
@@ -30,18 +25,19 @@ class MailPhoneScreen extends StatelessWidget {
   List<Widget> _listaItems(List<dynamic> data, BuildContext context) {
     final List<Widget> opciones = [];
 
-    data.forEach((opt) {
+    for (int i = 0; i < data.length; i++) {
       final widgetTemp = ListTile(
-        title: Text(opt['curso']),
+        title: Text(data[i]),
         trailing: Icon(Icons.keyboard_arrow_right),
         onTap: () {
-          Navigator.pushNamed(context, ''); //opt['ruta']
+          //Navigator.pushNamed(context, ''); //opt['ruta']
         },
       );
       opciones
         ..add(widgetTemp)
         ..add(Divider());
-    });
+    }
+    ;
     return opciones;
   }
 }

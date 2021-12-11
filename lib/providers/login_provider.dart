@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:seneca/models/cursos.dart';
@@ -19,7 +17,6 @@ class LoginProvider extends ChangeNotifier {
   LoginProvider() {
     print("Login Provider inicalizado");
     getAcounts();
-    getCursos();
   }
 
   Future<String> _getJsonData(String baseurl, String api, String pagina) async {
@@ -38,12 +35,16 @@ class LoginProvider extends ChangeNotifier {
     list = nowPlayingRespose.result;
   }
 
-  getCursos() async {
+  Future<List<String>> getCursos() async {
     String jsonData = await this._getJsonData(_url, _api, _hoja);
     jsonData = '{"result":' + jsonData + '}';
     final nowPlayingRespose = Cursos.fromJson(jsonData);
+    List<String> nombres = [];
 
-    return nowPlayingRespose.result;
+    for (int i = 0; i < nowPlayingRespose.result.length; i++) {
+      nombres.add(nowPlayingRespose.result[i].cursoNombre);
+    }
+    return nombres;
   }
 }
 

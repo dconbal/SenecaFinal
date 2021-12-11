@@ -1,5 +1,8 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:seneca/models/alumnos.dart';
 import 'package:seneca/models/cursos.dart';
 import 'package:seneca/models/login.dart';
 
@@ -9,10 +12,16 @@ class LoginProvider extends ChangeNotifier {
   String _baseUrl = "opensheet.vercel.app";
   String _page = "1";
 
+  //hoja excel
+  //https://docs.google.com/spreadsheets/d/1TUUhwPtc06E_Ka-TU_4XUiGOz-BZOEjdLvbxRAJQiMg/edit#gid=0
+
   //https://opensheet.vercel.app/1TUUhwPtc06E_Ka-TU_4XUiGOz-BZOEjdLvbxRAJQiMg/Cursos
   final _url = "opensheet.vercel.app";
   final _api = "1TUUhwPtc06E_Ka-TU_4XUiGOz-BZOEjdLvbxRAJQiMg";
-  final _hoja = "Cursos";
+  final _hojaCursos = "Cursos";
+
+  //https://opensheet.vercel.app/1TUUhwPtc06E_Ka-TU_4XUiGOz-BZOEjdLvbxRAJQiMg/Datos_Alumnado
+  final _hojaAlumnos = "Datos_Alumnado";
 
   LoginProvider() {
     print("Login Provider inicalizado");
@@ -36,7 +45,7 @@ class LoginProvider extends ChangeNotifier {
   }
 
   Future<List<String>> getCursos() async {
-    String jsonData = await this._getJsonData(_url, _api, _hoja);
+    String jsonData = await this._getJsonData(_url, _api, _hojaCursos);
     jsonData = '{"result":' + jsonData + '}';
     final nowPlayingRespose = Cursos.fromJson(jsonData);
     List<String> nombres = [];
@@ -45,6 +54,19 @@ class LoginProvider extends ChangeNotifier {
       nombres.add(nowPlayingRespose.result[i].cursoNombre);
     }
     return nombres;
+  }
+
+  Future<List<dynamic>> getAlumnos(String cursoABuscarAlumnos) async {
+    String jsonData = await this._getJsonData(_url, _api, _hojaAlumnos);
+    jsonData = '{"result":' + jsonData + '}';
+    final nowPlayingRespose = Alumnos.fromJson(jsonData);
+    List<String> nombresAlumnos = [];
+
+    for (int i = 0; i < nowPlayingRespose.result.length; i++) {
+      if (nowPlayingRespose.result[i].curso == cursoABuscarAlumnos)
+        nombresAlumnos.add(nowPlayingRespose.result[i].nombre);
+    }
+    return nombresAlumnos;
   }
 }
 

@@ -6,6 +6,7 @@ import 'package:seneca/screens/alumnado_screen.dart';
 import 'package:seneca/screens/alumnos_screen.dart';
 import 'package:seneca/screens/centro_screen.dart';
 import 'package:seneca/screens/conductas_contrarias_screen.dart';
+import 'package:seneca/screens/datos_alumno.dart';
 import 'package:seneca/screens/login_screen.dart';
 import 'package:seneca/screens/principal_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -22,7 +23,7 @@ class AppState extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => LoginProvider(), lazy: false),
+        //ChangeNotifierProvider(create: (_) => LoginProvider(), lazy: false),
         ChangeNotifierProvider(
             create: (_) => GoogleSignInProvider(), lazy: false)
       ],
@@ -46,6 +47,7 @@ class MyApp extends StatelessWidget {
         'alumnado': (_) => AlumnadoScreen(),
         'contact': (_) => MailPhoneScreen(),
         'alumnos': (_) => AlumnosScreen(),
+        'datos_alumnos': (_) => DatosAlumnoScreen(),
       },
     );
   }

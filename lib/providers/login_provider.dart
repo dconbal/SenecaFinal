@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:seneca/models/alumnos.dart';
@@ -7,6 +5,8 @@ import 'package:seneca/models/cursos.dart';
 import 'package:seneca/models/login.dart';
 
 class LoginProvider extends ChangeNotifier {
+  List<DatosAlumnos> alumno = [];
+
   List<Result> list = [];
   String _key = "1R8ypeKfUwas_L4_Akjenuf5LA6iF_8Wpr9DY2GleD0k";
   String _baseUrl = "opensheet.vercel.app";
@@ -26,6 +26,7 @@ class LoginProvider extends ChangeNotifier {
   LoginProvider() {
     print("Login Provider inicalizado");
     getAcounts();
+    getAlumno();
   }
 
   Future<String> _getJsonData(String baseurl, String api, String pagina) async {
@@ -60,13 +61,19 @@ class LoginProvider extends ChangeNotifier {
     String jsonData = await this._getJsonData(_url, _api, _hojaAlumnos);
     jsonData = '{"result":' + jsonData + '}';
     final nowPlayingRespose = Alumnos.fromJson(jsonData);
-    List<String> nombresAlumnos = [];
-
+    List<dynamic> nombresAlumnos = [];
     for (int i = 0; i < nowPlayingRespose.result.length; i++) {
       if (nowPlayingRespose.result[i].curso == cursoABuscarAlumnos)
         nombresAlumnos.add(nowPlayingRespose.result[i].nombre);
     }
     return nombresAlumnos;
+  }
+
+  getAlumno() async {
+    String jsonData = await this._getJsonData(_url, _api, _hojaAlumnos);
+    jsonData = '{"result":' + jsonData + '}';
+    final nowPlayingRespose = Alumnos.fromJson(jsonData);
+    alumno = nowPlayingRespose.result;
   }
 }
 

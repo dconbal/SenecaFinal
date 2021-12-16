@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\src\\Flutter proyectos\\senecafinal\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "C:\\src\\Flutter proyectos\\SenecaFinal-1\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Daniel\\.gradle\\caches\\transforms-2\\files-2.1\\14e561dfe998324f0993f7eed2935f20\\jetified-play-services-basement-17.1.0\\res\\values\\values.xml",
@@ -59,7 +59,7 @@
                     }
                 },
                 {
-                    "source": "C:\\src\\Flutter proyectos\\senecafinal\\build\\app\\generated\\res\\google-services\\debug\\values\\values.xml",
+                    "source": "C:\\src\\Flutter proyectos\\SenecaFinal-1\\build\\app\\generated\\res\\google-services\\debug\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8",
                         "startColumns": "4,4,4,4,4,4,4",
@@ -73,6 +73,25 @@
                         "startOffsets": "8183,8327,8409,8513,8622,8742,8838",
                         "endColumns": "143,81,103,108,119,95,72",
                         "endOffsets": "8322,8404,8508,8617,8737,8833,8906"
+                    }
+                },
+                {
+                    "source": "C:\\src\\Flutter proyectos\\SenecaFinal-1\\android\\app\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "3,14",
+                        "startColumns": "4,4",
+                        "startOffsets": "176,830",
+                        "endLines": "7,16",
+                        "endColumns": "12,12",
+                        "endOffsets": "472,996"
+                    },
+                    "to": {
+                        "startLines": "119,124",
+                        "startColumns": "4,4",
+                        "startOffsets": "8982,9279",
+                        "endLines": "123,126",
+                        "endColumns": "12,12",
+                        "endOffsets": "9274,9443"
                     }
                 },
                 {
@@ -90,25 +109,6 @@
                         "startOffsets": "166,224,290,353,1350,1421",
                         "endColumns": "57,65,62,61,70,71",
                         "endOffsets": "219,285,348,410,1416,1488"
-                    }
-                },
-                {
-                    "source": "C:\\src\\Flutter proyectos\\senecafinal\\android\\app\\src\\main\\res\\values\\styles.xml",
-                    "from": {
-                        "startLines": "3,14",
-                        "startColumns": "4,4",
-                        "startOffsets": "176,830",
-                        "endLines": "7,16",
-                        "endColumns": "12,12",
-                        "endOffsets": "472,996"
-                    },
-                    "to": {
-                        "startLines": "119,124",
-                        "startColumns": "4,4",
-                        "startOffsets": "8982,9279",
-                        "endLines": "123,126",
-                        "endColumns": "12,12",
-                        "endOffsets": "9274,9443"
                     }
                 },
                 {

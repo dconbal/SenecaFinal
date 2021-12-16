@@ -15,7 +15,9 @@ class AlumnadoScreen extends StatelessWidget {
                 redireccionar: 'contact'),
             Lista(icono: Icons.map, texto: "Localizacion", redireccionar: ''),
             Lista(
-                icono: Icons.album, texto: "Horario Clase", redireccionar: ''),
+                icono: Icons.album,
+                texto: "Horario Clase",
+                redireccionar: 'horario'),
           ],
         ),
       ),

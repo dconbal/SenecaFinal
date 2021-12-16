@@ -18,15 +18,6 @@ class CentroScreen extends StatelessWidget {
             Lista(
                 icono: Icons.album, texto: "Alumnos centro", redireccionar: ''),
           ],
-
-          //ListView(
-          //children: [
-          //  Elementos(
-          //      redireccionar: 'conductas', texto: "Conductas contrarias"),
-          //  Elementos(redireccionar: '', texto: "Notas"),
-          //  Elementos(redireccionar: '', texto: "Buscar Alumno"),
-          //  Elementos(redireccionar: '', texto: "Alumnos centro")
-          //],
         ),
       ),
     );

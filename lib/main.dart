@@ -7,6 +7,8 @@ import 'package:seneca/screens/alumnos_screen.dart';
 import 'package:seneca/screens/centro_screen.dart';
 import 'package:seneca/screens/conductas_contrarias_screen.dart';
 import 'package:seneca/screens/datos_alumno.dart';
+import 'package:seneca/screens/horario_screen.dart';
+import 'package:seneca/screens/horarios_cursos_page.dart';
 import 'package:seneca/screens/login_screen.dart';
 import 'package:seneca/screens/principal_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -23,7 +25,7 @@ class AppState extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        //ChangeNotifierProvider(create: (_) => LoginProvider(), lazy: false),
+        ChangeNotifierProvider(create: (_) => LoginProvider(), lazy: false),
         ChangeNotifierProvider(
             create: (_) => GoogleSignInProvider(), lazy: false)
       ],
@@ -38,7 +40,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       //initialRoute: 'login',
-      initialRoute: 'contact',
+      initialRoute: 'alumnado',
       routes: {
         'login': (_) => LoginPage(),
         'principal': (_) => PrincipalScreen(),
@@ -48,6 +50,8 @@ class MyApp extends StatelessWidget {
         'contact': (_) => MailPhoneScreen(),
         'alumnos': (_) => AlumnosScreen(),
         'datos_alumnos': (_) => DatosAlumnoScreen(),
+        'horario': (_) => HorarioScreen(),
+        'cursos_horario': (_) => HorariosCursosScreen(),
       },
     );
   }
